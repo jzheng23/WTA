@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="code.with.cal.localnotificationstutorial.code.localnotificationstutorial.SurveyActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textview_object"
+                style="@style/style_question"
+                android:layout_width="wrap_content"
+                android:text="@string/q1" />
+
+            <EditText
+                android:id="@+id/editText_object"
+                style="@style/style_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/tapToAnswer"
+                android:inputType="textAutoCorrect"
+                android:minHeight="48dp"
+                android:textColorHint="#757575" />
+
+            <TextView
+                android:id="@+id/textview_location"
+                style="@style/style_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q2" />
+
+            <EditText
+                android:id="@+id/editText_location"
+                style="@style/style_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/tapToAnswer"
+                android:inputType="textAutoCorrect"
+                android:minHeight="48dp"
+                android:textColorHint="#757575" />
+
+            <TextView
+                android:id="@+id/textview_companion"
+                style="@style/style_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q3" />
+
+            <LinearLayout
+                style="@style/checkBoxStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox_alone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="@string/c31" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_friend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="@string/c32" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_family"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="@string/c33" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox_companion_other"
+                    style="@style/checkBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/c0" />
+
+                <EditText
+                    android:id="@+id/editText_companion_other"
+                    style="@style/style_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/tapToAnswer"
+                    android:inputType="textAutoCorrect"
+                    android:textColorHint="#757575"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textview_device"
+                style="@style/style_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q7" />
+
+            <LinearLayout
+                style="@style/checkBoxStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="@string/c71" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_computer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="@string/c72" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_watch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="@string/c73" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox_device_other"
+                    style="@style/checkBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/c0" />
+
+                <EditText
+                    android:id="@+id/editText_device_other"
+                    style="@style/style_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/tapToAnswer"
+                    android:inputType="textAutoCorrect"
+                    android:textColorHint="#757575"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textview_activity"
+                style="@style/style_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q4" />
+
+            <EditText
+                android:id="@+id/editText_activity"
+                style="@style/style_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/tapToAnswer"
+                android:inputType="textAutoCorrect"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"/>
+
+            <TextView
+                android:id="@+id/textview_duration"
+                style="@style/style_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q6" />
+
+            <EditText
+                android:id="@+id/editText_duration"
+                style="@style/style_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/tapToAnswer"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"/>
+
+            <TextView
+                android:id="@+id/textview_pre_activity"
+                style="@style/style_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q5" />
+
+            <EditText
+                android:id="@+id/editText_pre_activity"
+                style="@style/style_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/tapToAnswer"
+                android:inputType="textAutoCorrect"
+                android:minHeight="48dp"
+                android:textColorHint="#757575" />
+
+            <Button
+                android:id="@+id/button_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="submit"
+                android:text="@string/submit" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

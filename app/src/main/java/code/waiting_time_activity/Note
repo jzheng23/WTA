@@ -1,0 +1,38 @@
+Reminders
+    if not responded, no need to update
+    if responded, updateReminder
+
+Active report
+    ?dismiss the notification
+    ?blocking notification while app is open
+    updateReminder
+
+fun updateReminder(){
+ when {
+    now < time1 -> reminder = time2
+    now < time2 -> reminder = time3
+    now < time3 -> reminder = time1
+    }
+}
+
+Class reminder
+    fun update
+
+    //showAlert(time, title, message)
+        }
+
+        private fun showAlert(time: Long, title: String, message: String) {
+            val date = Date(time)
+            val dateFormat = android.text.format.DateFormat.getLongDateFormat(applicationContext)
+            val timeFormat = android.text.format.DateFormat.getTimeFormat(applicationContext)
+
+            AlertDialog.Builder(this)
+                .setTitle("Notification Scheduled")
+                .setMessage(
+                    "Title: " + title +
+                            "\nMessage: " + message +
+                            "\nAt: " + dateFormat.format(date) + " " + timeFormat.format(date)
+                )
+                .setPositiveButton("Okay") { _, _ -> }
+                .show()
+        }

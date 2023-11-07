@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SurveyActivity">
+    tools:context="code.with.cal.localnotificationstutorial.code.localnotificationstutorial.SurveyActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,148 +15,225 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textview_q1"
+                android:id="@+id/textview_object"
+                style="@style/style_question"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/q1" />
 
             <EditText
-                android:id="@+id/editText_a1"
-                android:layout_width="wrap_content"
+                android:id="@+id/editText_object"
+                style="@style/style_question"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints=""
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:hint="@string/tapToAnswer"
+                android:inputType="textAutoCorrect"
                 android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
             <TextView
-                android:id="@+id/textview_q2"
+                android:id="@+id/textview_location"
+                style="@style/style_question"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/q2" />
 
             <EditText
-                android:id="@+id/editText_a2"
-                android:layout_width="wrap_content"
+                android:id="@+id/editText_location"
+                style="@style/style_question"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints=""
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:hint="@string/tapToAnswer"
+                android:inputType="textAutoCorrect"
                 android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
             <TextView
-                android:id="@+id/textview_q3"
+                android:id="@+id/textview_companion"
+                style="@style/style_question"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/q3" />
 
-            <CheckBox
-                android:id="@+id/checkBox_a31"
+            <LinearLayout
+                style="@style/checkBoxStyle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/c31" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/checkBox_a32"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/c32" />
+                <CheckBox
+                    android:id="@+id/checkBox_alone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="@string/c31" />
 
-            <CheckBox
-                android:id="@+id/checkBox_a33"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/c33" />
+                <CheckBox
+                    android:id="@+id/checkBox_friend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="@string/c32" />
 
-            <CheckBox
-                android:id="@+id/checkBox_a34"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/c34" />
+                <CheckBox
+                    android:id="@+id/checkBox_family"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="@string/c33" />
 
-            <CheckBox
-                android:id="@+id/checkBox_a35"
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/c35" />
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox_companion_other"
+                    style="@style/checkBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/c0" />
+
+                <EditText
+                    android:id="@+id/editText_companion_other"
+                    style="@style/style_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/tapToAnswer"
+                    android:inputType="textAutoCorrect"
+                    android:textColorHint="#757575"
+                    android:visibility="gone" />
+
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/textview_q4"
+                android:id="@+id/textview_device"
+                style="@style/style_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q7" />
+
+            <LinearLayout
+                style="@style/checkBoxStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="@string/c71" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_computer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="@string/c72" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_watch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="@string/c73" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox_device_other"
+                    style="@style/checkBoxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/c0" />
+
+                <EditText
+                    android:id="@+id/editText_device_other"
+                    style="@style/style_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/tapToAnswer"
+                    android:inputType="textAutoCorrect"
+                    android:textColorHint="#757575"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textview_activity"
+                style="@style/style_question"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/q4" />
 
-            <CheckBox
-                android:id="@+id/checkBox_a41"
+            <EditText
+                android:id="@+id/editText_activity"
+                style="@style/style_question"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/c41" />
-
-            <CheckBox
-                android:id="@+id/checkBox_a42"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/c42" />
-
-            <CheckBox
-                android:id="@+id/checkBox_a43"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/c43" />
-
-            <CheckBox
-                android:id="@+id/checkBox_a44"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/c44" />
-
-            <CheckBox
-                android:id="@+id/checkBox_a45"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/c45" />
-
-            <CheckBox
-                android:id="@+id/checkBox_a46"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/c46" />
-
-            <CheckBox
-                android:id="@+id/checkBox_a47"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/c47" />
-
-            <CheckBox
-                android:id="@+id/checkBox_a48"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/c48" />
+                android:ems="10"
+                android:hint="@string/tapToAnswer"
+                android:inputType="textAutoCorrect"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"/>
 
             <TextView
-                android:id="@+id/textview_q5"
+                android:id="@+id/textview_duration"
+                style="@style/style_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/q6" />
+
+            <EditText
+                android:id="@+id/editText_duration"
+                style="@style/style_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/tapToAnswer"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"/>
+
+            <TextView
+                android:id="@+id/textview_pre_activity"
+                style="@style/style_question"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/q5" />
 
             <EditText
-                android:id="@+id/editText_a5"
-                android:layout_width="wrap_content"
+                android:id="@+id/editText_pre_activity"
+                style="@style/style_question"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="@string/am_waiting"
-                android:inputType="textPersonName"
+                android:hint="@string/tapToAnswer"
+                android:inputType="textAutoCorrect"
                 android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
             <Button
-                android:id="@+id/button_first"
-                android:layout_width="wrap_content"
+                android:id="@+id/button_submit"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:onClick="submit"
                 android:text="@string/submit" />
 

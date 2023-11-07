@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="code.with.cal.localnotificationstutorial" >
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
@@ -10,24 +9,45 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LocalNotificationsTutorial" >
+        android:theme="@style/Theme.LocalNotificationsTutorial">
         <activity
-            android:name=".SurveyActivity"
+            android:name="code.waiting_time_activity.BaseSurveyActivity"
+            android:exported="false"
+            android:label="@string/title_activity_base_survey"
+            android:theme="@style/Theme.LocalNotificationsTutorial.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.waiting_time_activity.NoActivity"
             android:exported="false" />
         <activity
-            android:name=".SurveyActivity2"
+            android:name="code.waiting_time_activity.SettingActivity2"
             android:exported="false" />
         <activity
-            android:name=".SettingActivity"
+            android:name="code.waiting_time_activity.HelpActivity2"
+            android:exported="false" />
+        <activity
+            android:name="code.waiting_time_activity.SurveyActivity"
+            android:exported="false" />
+        <activity
+            android:name="code.waiting_time_activity.SurveyActivity2"
+            android:exported="false" />
+        <activity
+            android:name="code.waiting_time_activity.SurveyActivity3"
+            android:exported="false" />
+        <activity
+            android:name="code.waiting_time_activity.SurveyActivity4"
             android:exported="false" />
 
         <receiver
-            android:name=".Notification"
+            android:name="code.waiting_time_activity.Notification"
             android:enabled="true" />
 
         <activity
-            android:name=".MainActivity"
-            android:exported="true" >
+            android:name="code.waiting_time_activity.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

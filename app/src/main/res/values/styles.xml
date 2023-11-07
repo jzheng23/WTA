@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="style_question">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_large</item>
+        <item name="android:layout_marginTop">@dimen/negative_small_margin</item>
+        <item name="android:layout_marginEnd">@dimen/margin_large</item>
+        <item name="android:layout_marginBottom">@dimen/negative_small_margin</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="checkBoxStyle">
+        <item name="android:layout_marginStart">@dimen/margin_large</item>
+        <item name="android:layout_marginTop">@dimen/negative_mid_margin</item>
+        <item name="android:layout_marginEnd">@dimen/margin_large</item>
+        <item name="android:layout_marginBottom">@dimen/negative_mid_margin</item>
+        <item name="android:minHeight">@dimen/min_height</item>
+    </style>
+
+    <style name="button_large">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">34sp</item>
+    </style>
+</resources>
